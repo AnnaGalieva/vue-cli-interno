@@ -1,30 +1,33 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <Head />
+  <HomePage />
+  <Blog />
+  <BlogDetails />
+  <Footer />
 </template>
+  
+<script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+import Head from './components/Head.vue';
+import HomePage from './components/HomePage.vue';
+import Blog from './components/Blog.vue';
+import Footer from './components/Footer.vue';
+import BlogDetails from './components/BlogDetails.vue';
+
+export default {
+  name: 'App',
+  components: {
+    Head,
+    HomePage,
+    Blog,
+    BlogDetails,
+    Footer
+  }, data() {
+    return {
+
+    };
+  },
 }
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+</script>
+  
+ 
