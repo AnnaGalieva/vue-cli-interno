@@ -9,23 +9,26 @@
                             <h1 class="details__main_heading_text">{{ article.heading }}</h1>
                             <div class="details__main_image">
                                 <img class="details__main_img" :src="article.images" alt="#">
-                            </div><div class="details__main_date"><div class="details__main_info">
-                                <p class="details__main_info_date">{{ article.date }}</p>
                             </div>
-                            <nav class="details__main_info_breadcrumb">
-                                <ul class="details__main_info_breadcrumb_ul">
-                                    <li class="details__main_info_breadcrumb_li">
-                                        <a class="details__main_info_breadcrumb_link" href="">{{ article.link1 }}</a>
-                                    </li>
-                                    <li class="details__main_info_breadcrumb_li">
-                                        <a class="details__main_info_breadcrumb_link" href="">{{ article.link2 }}</a>
-                                    </li>
-                                    <li class="details__main_info_breadcrumb_li">
-                                        <a class="details__main_info_breadcrumb_link" href="">{{ article.link3 }}</a>
-                                    </li>
-                                </ul>
-                            </nav></div>
-                            
+                            <div class="details__main_date">
+                                <div class="details__main_info">
+                                    <p class="details__main_info_date">{{ article.date }}</p>
+                                </div>
+                                <nav class="details__main_info_breadcrumb">
+                                    <ul class="details__main_info_breadcrumb_ul">
+                                        <li class="details__main_info_breadcrumb_li">
+                                            <a class="details__main_info_breadcrumb_link" href="">{{ article.link1 }}</a>
+                                        </li>
+                                        <li class="details__main_info_breadcrumb_li">
+                                            <a class="details__main_info_breadcrumb_link" href="">{{ article.link2 }}</a>
+                                        </li>
+                                        <li class="details__main_info_breadcrumb_li">
+                                            <a class="details__main_info_breadcrumb_link" href="">{{ article.link3 }}</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
                         </div>
                         <div class="details__main_content">
                             <p class="details__main_content_text">{{ article.content }}</p>
@@ -62,7 +65,7 @@ export default {
             articles: [{
                 id: 1,
                 heading: "Let’s Get Solution for Building Construction Work",
-                images:require("@/assets/img/kitchen.svg"),
+                images: require("@/assets/img/kitchen.svg"),
                 date: "26 December,2022",
                 link1: "Interior",
                 link2: "Interior",
@@ -71,7 +74,7 @@ export default {
             }, {
                 id: 2,
                 heading: "Building Construction Work",
-                images:require("@/assets/img/Bedroom.svg"),
+                images: require("@/assets/img/Bedroom.svg"),
                 date: "20 December,2022",
                 link1: "Interior",
                 link2: "Interior",
@@ -80,7 +83,7 @@ export default {
             }, {
                 id: 3,
                 heading: "Solution for Building Construction Work",
-                images:require("@/assets/img/articles5.png"),
+                images: require("@/assets/img/articles5.png"),
                 date: "20 December,2022",
                 link1: "Interior",
                 link2: "Interior",
@@ -89,7 +92,7 @@ export default {
             }, {
                 id: 4,
                 heading: "Get Solution for Building Construction Work",
-                images:require("@/assets/img/articles6.png"),
+                images: require("@/assets/img/articles6.png"),
                 date: "20 December,2022",
                 link1: "Interior",
                 link2: "Interior",
@@ -107,13 +110,13 @@ export default {
             }, {
                 id: 6,
                 heading: "Let’s Get Solution for Building Construction Work",
-                images:require("@/assets/img/projects__all_item_img1.png"),
+                images: require("@/assets/img/projects__all_item_img1.png"),
                 date: "20 December,2022",
                 link1: "Interior",
                 link2: "Interior",
                 link3: "Decore",
                 content: "Lorem ipsum dolor sit amet."
-            }, ],
+            },],
             buttonsTitle: "Tags",
             buttons: [
                 { id: 1, title: "Kitchen" },

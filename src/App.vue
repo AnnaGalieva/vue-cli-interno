@@ -1,6 +1,7 @@
 <template>
   <Head />
   <HomePage />
+  <Project />
   <Blog />
   <BlogDetails />
   <Footer />
@@ -13,6 +14,7 @@ import HomePage from './components/HomePage.vue';
 import Blog from './components/Blog.vue';
 import Footer from './components/Footer.vue';
 import BlogDetails from './components/BlogDetails.vue';
+import Project from './components/Project.vue';
 
 export default {
   name: 'App',
@@ -21,8 +23,9 @@ export default {
     HomePage,
     Blog,
     BlogDetails,
-    Footer
-  }, data() {
+    Footer,
+    Project
+}, data() {
     return {
 
     };

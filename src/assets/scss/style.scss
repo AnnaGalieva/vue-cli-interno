@@ -589,6 +589,7 @@ a {
     height: 354px;
     flex-shrink: 0;
     &__info {
+        margin-left: 80px;
         display: flex;
         width: 503px;
         padding: 41px 78px;
@@ -1114,6 +1115,146 @@ a {
             //     display: flex;
             //     align-items: center;
             // }
+        }
+    }
+}
+
+.project {
+    margin-top: 57px;
+    margin-bottom: 200px;
+    background-image: url('@/assets/img/project_banner.png');
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    height: 360px;
+    flex-shrink: 0;
+    align-items: flex-end;
+    &__info {
+        border-radius: 37px 37px 0px 0px;
+        background: #FFF;
+        display: flex;
+        width: 404px;
+        padding: 41px 125px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        &__heading {
+            display: flex;
+            width: 254px;
+            flex-direction: column;
+            align-items: center;
+            &_text {
+                width: 347px;
+                color: #292F36;
+                font-family: DM Serif Display;
+                font-size: 50px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 125%;
+                padding-left: 90px;
+            }
+            &_breadcrumb {
+                width: 148px;
+                &_ul {
+                    list-style-type: none;
+                    display: flex;
+                }
+                &_li {
+                    list-style-type: none;
+                    // margin-bottom: 5px;
+                }
+                &_li:not(:last-child)::after {
+                    content: "/";
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: 636363;
+                    padding-left: 8px;
+                    padding-right: 8px;
+                }
+                &_link {
+                    color: #4D5053;
+                    font-family: Jost;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    letter-spacing: 0.22px;
+                }
+            }
+        }
+    }
+}
+
+.categories {
+    margin-bottom: 200px;
+    &__tags {
+        &_btn {
+            &__text {
+                color: #292F36;
+                text-align: center;
+                font-family: Jost;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 125%;
+                letter-spacing: 0.36px;
+            }
+        }
+    }
+    &__all {
+        &_content {
+            display: flex;
+            width: 585px;
+            align-items: center;
+            gap: 298px;
+            &_texting {
+                color: #292F36;
+                font-family: DM Serif Display;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 125%;
+                letter-spacing: 0.5px;
+            }
+            &_breadcrumb {
+                width: 217px;
+                &_ul {
+                    list-style-type: none;
+                    display: flex;
+                }
+                &_li {
+                    list-style-type: none;
+                }
+                &_li:not(:last-child)::after {
+                    content: "/";
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: 636363;
+                    padding-left: 8px;
+                    padding-right: 8px;
+                }
+                &_link {
+                    color: #4D5053;
+                    font-family: Jost;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                }
+            }
+            &_btn {
+                cursor: pointer;
+                border-radius: 50%;
+                border: none;
+                width: 70px;
+                height: 70px;
+                flex-shrink: 0;
+            }
         }
     }
 }
