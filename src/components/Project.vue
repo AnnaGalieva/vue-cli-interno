@@ -21,59 +21,248 @@
             <section class="categories center">
                 <div class="categories__tags">
                     <div class="categories__tags_button">
-                        <button class="categories__tags_btn">
-                            <h1 class="categories__tags_btn_text"></h1>
+                        <button @click="cardsFilter" v-for="button in buttons" :key="button.id" :id="button.id"
+                            class="categories__tags_btn">
+                            <h1 class="categories__tags_btn_text">{{ button.title }}</h1>
+                            <!-- @click="show = button.id"  -->
                         </button>
                     </div>
                 </div>
                 <div class="categories__all">
-                    <div class="categories__all_image">
-                        <img class="categories__all_img" src="" alt="img">
-                    </div>
-                    <div class="categories__all_content">
-                        <div class="categories__all_content_text">
-                            <p class="categories__all_content_texting">Modern Kitchan</p>
-                            <nav class="categories__all_content_breadcrumb">
-                                <ul class="categories__all_content_breadcrumb_ul">
-                                    <li class="categories__all_content_breadcrumb_li">
-                                        <a class="categories__all_content_breadcrumb_link" href="">Decor</a>
-                                    </li>
-                                    <li class="categories__all_content_breadcrumb_li">
-                                        <a class="categories__all_content_breadcrumb_link" href="">Artchitecture</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="categories__all_content_button">
-                            <button class="categories__all_content_btn"><svg xmlns="http://www.w3.org/2000/svg" width="70"
-                                    height="70" viewBox="0 0 70 70" fill="none">
-                                    <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
-                                    <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg></button>
-                        </div>
-                    </div>
-
+                    <ProjectCard :project="project" v-for="project in currentCards" :key="project.id" />
                 </div>
             </section>
-        </main>
+            <section class="pagination center">
+                <ul class="pagination__list">
 
+                    <li class="pagination__list_item">
+                        <a class="pagination__list_item_hov" href="#">
+                            <h1 class="pagination__list_item_text"></h1>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52" fill="none">
+                                <circle cx="26.5" cy="26" r="26" fill="#F4F0EC" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="pagination__list_item">
+                        <a class="pagination__list_item_hov" href="#">
+                            <h1 class="pagination__list_item_text"></h1><svg xmlns="http://www.w3.org/2000/svg" width="53"
+                                height="52" viewBox="0 0 53 52" fill="none">
+                                <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="pagination__list_item">
+                        <a class="pagination__list_item_hov" href="#">
+                            <h1 class="pagination__list_item_text"></h1><svg xmlns="http://www.w3.org/2000/svg" width="53"
+                                height="52" viewBox="0 0 53 52" fill="none">
+                                <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="pagination__list_item">
+                        <a class="pagination__list_item_hov" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52" fill="none">
+                                <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274" />
+                                <path d="M23.5571 32L29.5 25.3143L23.5571 18.6286" stroke="#292F36" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </section>
+        </main>
     </div>
 </template>
 
 <script>
+import ProjectCard from './ProjectCard.vue'
 export default {
     name: 'Project',
+    components: {
+        ProjectCard
+    },
 
     data() {
         return {
+            buttons: [
+                { id: 1, title: "Bathroom" },
+                { id: 2, title: "Bedroom" },
+                { id: 3, title: "Kitchen" },
+                { id: 4, title: "Living Area" },
+            ],
+            // show: 2,
+            // currentTab: "Bedroom",
+
+            cards: [{
+                id: 1,
+                nameid: "Bedroom",
+                images: require("@/assets/img/project-beadroom1.png"),
+                text: "Minimal Bedroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            }, {
+                id: 2,
+                nameid: "Bedroom",
+                images: require("@/assets/img/project-beadroom2.png"),
+                text: "Minimal Bedroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            }, {
+                id: 3,
+                nameid: "Bedroom",
+                images: require("@/assets/img/project-beadroom3.png"),
+                text: "Classic Minimal Bedroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            }, {
+                id: 4,
+                nameid: "Bedroom",
+                images: require("@/assets/img/project-beadroom4.png"),
+                text: "Modern Bedroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            }, {
+                id: 5,
+                nameid: "Bedroom",
+                images: require("@/assets/img/project-beadroom5.png"),
+                text: "Minimal Bedroom table",
+                link1: "Decor",
+                link2: "Artchitecture",
+            }, {
+                id: 6,
+                nameid: "Bedroom",
+                images: require("@/assets/img/project-beadroom6.png"),
+                text: "System Table",
+                link1: "Decor",
+                link2: "Artchitecture",
+            }, {
+                id: 7,
+                nameid: "Bedroom",
+                images: require("@/assets/img/project-beadroom7.png"),
+                text: "Modern Medroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            }, {
+                id: 8,
+                nameid: "Bedroom",
+                images: require("@/assets/img/project-beadroom8.png"),
+                text: "Modern Medroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            }, {
+                id: 9,
+                nameid: "Bathroom",
+                images: require("@/assets/img/project-beadroom7.png"),
+                text: "Modern Medroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            }, {
+                id: 10,
+                nameid: "Kitchen",
+                images: require("@/assets/img/project-beadroom8.png"),
+                text: "Modern Medroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            }, {
+                id: 11,
+                nameid: "Living Area",
+                images: require("@/assets/img/project-beadroom6.png"),
+                text: "Modern Medroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            },],
+
+            currentCards: [
+                {
+                    id: 1,
+                    nameid: "Bedroom",
+                    images: require("@/assets/img/project-beadroom1.png"),
+                    text: "Minimal Bedroom",
+                    link1: "Decor",
+                    link2: "Artchitecture",
+                }, {
+                    id: 2,
+                    nameid: "Bedroom",
+                    images: require("@/assets/img/project-beadroom2.png"),
+                    text: "Minimal Bedroom",
+                    link1: "Decor",
+                    link2: "Artchitecture",
+                }, {
+                    id: 3,
+                    nameid: "Bedroom",
+                    images: require("@/assets/img/project-beadroom3.png"),
+                    text: "Classic Minimal Bedroom",
+                    link1: "Decor",
+                    link2: "Artchitecture",
+                }, {
+                    id: 4,
+                    nameid: "Bedroom",
+                    images: require("@/assets/img/project-beadroom4.png"),
+                    text: "Modern Bedroom",
+                    link1: "Decor",
+                    link2: "Artchitecture",
+                }, {
+                    id: 5,
+                    nameid: "Bedroom",
+                    images: require("@/assets/img/project-beadroom5.png"),
+                    text: "Minimal Bedroom table",
+                    link1: "Decor",
+                    link2: "Artchitecture",
+                }, {
+                    id: 6,
+                    nameid: "Bedroom",
+                    images: require("@/assets/img/project-beadroom6.png"),
+                    text: "System Table",
+                    link1: "Decor",
+                    link2: "Artchitecture",
+                }, {
+                    id: 7,
+                    nameid: "Bedroom",
+                    images: require("@/assets/img/project-beadroom7.png"),
+                    text: "Modern Medroom",
+                    link1: "Decor",
+                    link2: "Artchitecture",
+                }, {
+                    id: 8,
+                    nameid: "Bedroom",
+                    images: require("@/assets/img/project-beadroom8.png"),
+                    text: "Modern Medroom",
+                    link1: "Decor",
+                    link2: "Artchitecture",
+                }
+
+            ]
+
 
         };
     },
 
     methods: {
+        // shows() {
+        //     this.show = !this.show 
+        // }
+
+        cardsFilter(e) {
+            this.currentCards = this.cards.filter(
+                project => project.nameid === e.target.id
+            );
+            //return this.cards;
+        },
 
     },
+    // computed: {
+    //     filteredProjects() {
+    //         if (this.currentTab)
+    //             return this.cards.filter(
+    //                 (project) => project.nameid === this.currentTab
+    //             );
+    //         else return this.cards;
+    //     },
+    // },
+
 };
 </script>
 

@@ -1191,8 +1191,22 @@ a {
 .categories {
     margin-bottom: 200px;
     &__tags {
+        display: flex;
+        justify-content: center;
+        &_button {
+            display: flex;
+            width: 880px;
+            justify-content: center;
+            align-items: center;
+            gap: 96px;
+            margin-bottom: 50px;
+            border-radius: 62px;
+            border: 1px solid #CDA274;
+            padding: 26px 1px;
+        }
         &_btn {
-            &__text {
+            border: none;
+            &_text {
                 color: #292F36;
                 text-align: center;
                 font-family: Jost;
@@ -1201,11 +1215,48 @@ a {
                 font-weight: 600;
                 line-height: 125%;
                 letter-spacing: 0.36px;
+                background-color: #FFF;
+                padding: 26px 30px;
+                cursor: pointer;
+                &:hover {
+                    color: #FFF;
+                    background-color: #CDA274;
+                    border-radius: 18px;
+                }
             }
         }
     }
     &__all {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        // grid-template-rows: repeat(3, auto);
+        align-items: start;
+        column-gap: 28px;
+        &_image {
+            display: flex;
+        }
+        &_star {
+            cursor: pointer;
+            color: white;
+            width: 36px;
+            height: 34px;
+            flex-shrink: 0;
+            position: absolute;
+            right: 0%;
+            &:hover path {
+                fill: #FFA928;
+                transition: 0.1s;
+            }
+            // &:active path {
+            //     color: #FFA928;
+            // }
+        }
+        &_items {
+            position: relative;
+        }
         &_content {
+            margin-top: 35px;
+            margin-bottom: 35px;
             display: flex;
             width: 585px;
             align-items: center;
@@ -1218,6 +1269,7 @@ a {
                 font-weight: 400;
                 line-height: 125%;
                 letter-spacing: 0.5px;
+                //width: 290px;
             }
             &_breadcrumb {
                 width: 217px;
