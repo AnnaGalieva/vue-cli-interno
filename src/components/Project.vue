@@ -154,7 +154,7 @@ export default {
                 link2: "Artchitecture",
             }, {
                 id: 9,
-                nameid: "Bathroom",
+                nameid: "Kitchen",
                 images: require("@/assets/img/project-beadroom7.png"),
                 text: "Modern Medroom",
                 link1: "Decor",
@@ -168,6 +168,27 @@ export default {
                 link2: "Artchitecture",
             }, {
                 id: 11,
+                nameid: "Bathroom",
+                images: require("@/assets/img/project-beadroom6.png"),
+                text: "Modern Medroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            },{
+                id: 12,
+                nameid: "Bathroom",
+                images: require("@/assets/img/project-beadroom7.png"),
+                text: "Modern Medroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            }, {
+                id: 13,
+                nameid: "Living Area",
+                images: require("@/assets/img/project-beadroom8.png"),
+                text: "Modern Medroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            }, {
+                id: 14,
                 nameid: "Living Area",
                 images: require("@/assets/img/project-beadroom6.png"),
                 text: "Modern Medroom",
