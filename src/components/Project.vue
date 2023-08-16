@@ -247,7 +247,7 @@ export default {
 
         cardsFilter(e) {
             this.currentCards = this.cards.filter(
-                project => project.nameid === e.target.id
+                (project) => project.nameid === e.target.innerText
             );
             //return this.cards;
         },
