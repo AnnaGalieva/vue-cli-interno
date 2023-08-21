@@ -1310,3 +1310,50 @@ a {
         }
     }
 }
+
+.poject-details {
+    margin-top: 57px;
+    margin-bottom: 107px;
+    background-image: url('@/assets/img/projectdetails-banner.png');
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    height: 360px;
+    flex-shrink: 0;
+    align-items: flex-end;
+    &__content {
+        margin-left: 270px;
+        margin-top: 164px;
+        margin-bottom: 70px;
+        width: 658px;
+        &_title {
+            color: #292F36;
+            font-family: DM Serif Display;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125%;
+            letter-spacing: 1px;
+            padding-bottom: 11px;
+        }
+        &_text1 {
+            color: #4D5053;
+            font-family: Jost;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 0.22px;
+            padding-bottom: 40px;
+        }
+        &_text2 {
+            color: #4D5053;
+            font-family: Jost;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 0.22px;
+        }
+    }
+}

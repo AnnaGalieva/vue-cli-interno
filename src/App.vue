@@ -2,6 +2,7 @@
   <Head />
   <HomePage />
   <Project />
+  <ProjectDetails />
   <Blog />
   <BlogDetails />
   <Footer />
@@ -15,6 +16,7 @@ import Blog from './components/Blog.vue';
 import Footer from './components/Footer.vue';
 import BlogDetails from './components/BlogDetails.vue';
 import Project from './components/Project.vue';
+import ProjectDetails from './components/ProjectDetails.vue';
 
 export default {
   name: 'App',
@@ -24,7 +26,8 @@ export default {
     Blog,
     BlogDetails,
     Footer,
-    Project
+    Project,
+    ProjectDetails
 }, data() {
     return {
 
