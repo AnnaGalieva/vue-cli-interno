@@ -3,6 +3,7 @@
   <HomePage />
   <Project />
   <ProjectDetails />
+  <Swipers />
   <Blog />
   <BlogDetails />
   <Footer />
@@ -17,6 +18,7 @@ import Footer from './components/Footer.vue';
 import BlogDetails from './components/BlogDetails.vue';
 import Project from './components/Project.vue';
 import ProjectDetails from './components/ProjectDetails.vue';
+import Swipers from './components/Swipers.vue';
 
 export default {
   name: 'App',
@@ -27,8 +29,9 @@ export default {
     BlogDetails,
     Footer,
     Project,
-    ProjectDetails
-}, data() {
+    ProjectDetails,
+    Swipers
+  }, data() {
     return {
 
     };
