@@ -6,6 +6,7 @@
   <Swipers />
   <Blog />
   <BlogDetails />
+  <NotFound />
   <Footer />
 </template>
   
@@ -19,6 +20,7 @@ import BlogDetails from './components/BlogDetails.vue';
 import Project from './components/Project.vue';
 import ProjectDetails from './components/ProjectDetails.vue';
 import Swipers from './components/Swipers.vue';
+import NotFound from './components/NotFound.vue';
 
 export default {
   name: 'App',
@@ -30,8 +32,9 @@ export default {
     Footer,
     Project,
     ProjectDetails,
-    Swipers
-  }, data() {
+    Swipers,
+    NotFound
+}, data() {
     return {
 
     };
