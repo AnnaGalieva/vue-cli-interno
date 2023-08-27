@@ -42,12 +42,13 @@
                                 </nav>
                             </div>
                             <div class="projects__all_item_content_button">
-                                <button class="projects__all_item_content_btn"><svg xmlns="http://www.w3.org/2000/svg"
-                                        width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <router-link to="/Project" class="projects__all_item_content_btn"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70"
+                                        fill="none">
                                         <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
                                         <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg></button>
+                                    </svg></router-link>
                             </div>
                         </div>
                     </div>
@@ -68,12 +69,13 @@
                                 </nav>
                             </div>
                             <div class="projects__all_item_content_button">
-                                <button class="projects__all_item_content_btn"><svg xmlns="http://www.w3.org/2000/svg"
-                                        width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <router-link to="/Project" class="projects__all_item_content_btn"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70"
+                                        fill="none">
                                         <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
                                         <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg></button>
+                                    </svg></router-link>
                             </div>
                         </div>
                     </div>
@@ -94,12 +96,13 @@
                                 </nav>
                             </div>
                             <div class="projects__all_item_content_button">
-                                <button class="projects__all_item_content_btn"><svg xmlns="http://www.w3.org/2000/svg"
-                                        width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <router-link to="/Project" class="projects__all_item_content_btn"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70"
+                                        fill="none">
                                         <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
                                         <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg></button>
+                                    </svg></router-link>
                             </div>
                         </div>
                     </div>
@@ -120,12 +123,13 @@
                                 </nav>
                             </div>
                             <div class="projects__all_item_content_button">
-                                <button class="projects__all_item_content_btn"><svg xmlns="http://www.w3.org/2000/svg"
-                                        width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <router-link to="/Project" class="projects__all_item_content_btn"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70"
+                                        fill="none">
                                         <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
                                         <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg></button>
+                                    </svg></router-link>
                             </div>
                         </div>
                     </div>
@@ -176,13 +180,13 @@
                             <div class="news__all_item_content_contentmin">
                                 <p class="news__all_item_content_texting">26 December,2022 </p>
                                 <div class="news__all_item_content_button">
-                                    <a href="blog.html" class="news__all_item_content_btn"><svg
+                                    <router-link to="/Blog" class="news__all_item_content_btn"><svg
                                             xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53"
                                             fill="none">
                                             <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
                                             <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
                                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg></a>
+                                        </svg></router-link>
                                 </div>
                             </div>
                         </div>
@@ -196,13 +200,13 @@
                             <div class="news__all_item_content_contentmin">
                                 <p class="news__all_item_content_texting">22 December,2022 </p>
                                 <div class="news__all_item_content_button">
-                                    <a href="blog.html" class="news__all_item_content_btn_center"><svg
+                                    <router-link to="/Blog" class="news__all_item_content_btn_center"><svg
                                             xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53"
                                             fill="none">
                                             <circle cx="26" cy="26.267" r="26" fill="white" />
                                             <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
                                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg></a>
+                                        </svg></router-link>
                                 </div>
                             </div>
                         </div>
@@ -216,13 +220,13 @@
                             <div class="news__all_item_content_contentmin">
                                 <p class="news__all_item_content_texting">25 December,2022 </p>
                                 <div class="news__all_item_content_button">
-                                    <a href="blog.html" class="news__all_item_content_btn"><svg
+                                    <router-link to="/Blog" class="news__all_item_content_btn"><svg
                                             xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53"
                                             fill="none">
                                             <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
                                             <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
                                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg></a>
+                                        </svg></router-link>
                                 </div>
                             </div>
                         </div>

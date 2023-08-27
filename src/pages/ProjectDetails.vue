@@ -9,6 +9,7 @@
                     <p class="poject-details__content_text1"> {{ item.text1 }}</p>
                     <p class="poject-details__content_text2"> {{ item.text2 }}</p>
                 </div>
+                <Swipers />
             </section>
 
         </main>
@@ -18,9 +19,11 @@
 
 <script>
 import { mapState } from 'vuex';
+import Swipers from '../components/Swipers.vue'
 
 export default {
     name: 'ProjectDetails',
+    components:{Swipers},
 
     data() {
         return {

@@ -8,10 +8,11 @@
                         <nav class="project__info__heading_breadcrumb">
                             <ul class="project__info__heading_breadcrumb_ul">
                                 <li class="project__info__heading_breadcrumb_li">
-                                    <a class="project__info__heading_breadcrumb_link" href="">Home</a>
+                                    <router-link to="/" class="project__info__heading_breadcrumb_link">Home</router-link>
                                 </li>
                                 <li class="project__info__heading_breadcrumb_li">
-                                    <a class="project__info__heading_breadcrumb_link" href="">Project</a>
+                                    <router-link to="/Project"
+                                        class="project__info__heading_breadcrumb_link">Project</router-link>
                                 </li>
                             </ul>
                         </nav>
@@ -78,7 +79,7 @@
 </template>
 
 <script>
-import ProjectCard from './ProjectCard.vue'
+import ProjectCard from '../components/ProjectCard.vue'
 export default {
     name: 'Project',
     components: {
@@ -173,7 +174,7 @@ export default {
                 text: "Modern Medroom",
                 link1: "Decor",
                 link2: "Artchitecture",
-            },{
+            }, {
                 id: 12,
                 nameid: "Bathroom",
                 images: require("@/assets/img/project-beadroom7.png"),

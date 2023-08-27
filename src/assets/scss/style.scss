@@ -108,6 +108,7 @@ a {
             width: 130px;
         }
         &_btn {
+            cursor: pointer;
             color: #FFF;
             text-align: center;
             font-family: Jost;
@@ -1324,7 +1325,7 @@ a {
     &__content {
         margin-left: 270px;
         margin-top: 164px;
-        margin-bottom: 70px;
+        margin-bottom: 170px;
         width: 658px;
         &_title {
             color: #292F36;
@@ -1354,6 +1355,7 @@ a {
             font-weight: 400;
             line-height: 150%;
             letter-spacing: 0.22px;
+            padding-bottom: 80px;
         }
     }
 }
@@ -1362,7 +1364,9 @@ a {
     overflow: hidden;
 }
 
-.not-fond {
+.not-found {
+    margin-top: 164px;
+    margin-bottom: 170px;
     &__page {
         display: flex;
         gap: 81px;
@@ -1397,6 +1401,7 @@ a {
                 padding-bottom: 21px;
             }
             &_btn {
+                width: 150px;
                 cursor: pointer;
                 flex-direction: row;
                 display: flex;
