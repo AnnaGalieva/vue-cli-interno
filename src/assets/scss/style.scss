@@ -1397,6 +1397,7 @@ a {
                 padding-bottom: 21px;
             }
             &_btn {
+                cursor: pointer;
                 flex-direction: row;
                 display: flex;
                 padding: 26px 54px;
@@ -1416,6 +1417,6 @@ a {
                 letter-spacing: 0.36px;
             }
         }
-        &_img {}
+        // &_img {}
     }
 }
