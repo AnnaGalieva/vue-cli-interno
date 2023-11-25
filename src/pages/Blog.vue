@@ -36,8 +36,9 @@
                         <div class="post__content_info_min">
                             <p class="post__content_info_min_text">26 December,2022 </p>
                             <div class="post__content_info_min_button">
-                                <router-link to="/BlogDetails" class="post__content_info_min_btn"><svg xmlns="http://www.w3.org/2000/svg"
-                                        width="52" height="53" viewBox="0 0 52 53" fill="none">
+                                <router-link to="/BlogDetails" class="post__content_info_min_btn"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53"
+                                        fill="none">
                                         <circle cx="26" cy="26.5" r="26" fill="#F4F0EC" />
                                         <path d="M23.771 33.1855L29.7139 26.4998L23.771 19.8141" stroke="#292F36"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -76,52 +77,25 @@
                 </div>
             </section>
             <section class="pagination center">
-                <ul class="pagination__list">
-
-                    <li class="pagination__list_item">
-                        <a class="pagination__list_item_hov" href="#">
-                            <h1 class="pagination__list_item_text"></h1>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52" fill="none">
-                                <circle cx="26.5" cy="26" r="26" fill="#F4F0EC" />
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="pagination__list_item">
-                        <a class="pagination__list_item_hov" href="#">
-                            <h1 class="pagination__list_item_text"></h1><svg xmlns="http://www.w3.org/2000/svg" width="53"
-                                height="52" viewBox="0 0 53 52" fill="none">
-                                <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274" />
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="pagination__list_item">
-                        <a class="pagination__list_item_hov" href="#">
-                            <h1 class="pagination__list_item_text"></h1><svg xmlns="http://www.w3.org/2000/svg" width="53"
-                                height="52" viewBox="0 0 53 52" fill="none">
-                                <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274" />
-                            </svg>
-                        </a>
-                    </li>
-
-                    <li class="pagination__list_item">
-                        <a class="pagination__list_item_hov" href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52" fill="none">
-                                <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274" />
-                                <path d="M23.5571 32L29.5 25.3143L23.5571 18.6286" stroke="#292F36" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                    </li>
-
-
-                </ul>
+                <Pagination @click="paginate" data-id="01" class="pagination-button pagination-active">{{ "01" }}
+                </Pagination>
+                <Pagination @click="paginate" data-id="02" class="pagination-button">{{
+                    "02"
+                }}</Pagination>
+                <Pagination @click="paginate" data-id="03" class="pagination-button">{{
+                    "03"
+                }}</Pagination>
             </section>
         </main>
     </div>
 </template>
 <script>
+import Pagination from "@/components/Pagination.vue";
 export default {
     name: 'Blog',
+    components: {
+        Pagination
+    },
     data() {
         return {
             articles: [{
@@ -172,11 +146,184 @@ export default {
                 contentText: 'Best For Any Office & Business Interior Solution ',
                 date: '25 December,2022 ',
 
-            },]
+            },],
+            fullarticles: [
+                {
+                    id: 1,
+                    bnt: "01",
+                    src: require('@/assets/img/articles6.png'),
+                    alt: 'design',
+                    text: 'Interior Design',
+                    contentText: 'Best For Any Office & Business Interior Solution ',
+                    date: '25 December,2022 ',
+
+                }, {
+                    id: 2,
+                    bnt: "01",
+                    src: require('@/assets/img/articles6.png'),
+                    alt: 'design',
+                    text: 'Interior Design',
+                    contentText: 'Best For Any Office & Business Interior Solution ',
+                    date: '25 December,2022 ',
+
+                }, {
+                    id: 3,
+                    bnt: "01",
+                    src: require('@/assets/img/articles5.png'),
+                    alt: 'design',
+                    text: 'Interior Design',
+                    contentText: 'Best For Any Office & Business Interior Solution ',
+                    date: '25 December,2022 ',
+
+                }, {
+                    id: 4,
+                    bnt: "01",
+                    src: require('@/assets/img/articles6.png'),
+                    alt: 'design',
+                    text: 'Interior Design',
+                    contentText: 'Best For Any Office & Business Interior Solution ',
+                    date: '25 December,2022 ',
+
+                },
+                {
+                    id: 5,
+                    bnt: "01",
+                    src: require('@/assets/img/articles2.png'),
+                    alt: 'design',
+                    text: 'Interior Design',
+                    contentText: 'Best For Any Office & Business Interior Solution ',
+                    date: '25 December,2022 ',
+
+                }, {
+                    id: 6,
+                    bnt: "01",
+                    src: require('@/assets/img/articles6.png'),
+                    alt: 'design',
+                    text: 'Interior Design',
+                    contentText: 'Best For Any Office & Business Interior Solution ',
+                    date: '25 December,2022 ',
+
+                }, {
+                    id: 7,
+                    bnt: "02",
+                    src: require('@/assets/img/articles4.png'),
+                    alt: 'design',
+                    text: 'Interior Design',
+                    contentText: 'Best For Any Office & Business Interior Solution ',
+                    date: '25 December,2022 ',
+
+                }, {
+                    id: 8,
+                    bnt: "02",
+                    src: require('@/assets/img/articles6.png'),
+                    alt: 'design',
+                    text: 'Interior Design',
+                    contentText: 'Best For Any Office & Business Interior Solution ',
+                    date: '25 December,2022 ',
+
+                }, {
+                    id: 9,
+                    bnt: "02",
+                    src: require('@/assets/img/articles6.png'),
+                    alt: 'design',
+                    text: 'Interior Design',
+                    contentText: 'Best For Any Office & Business Interior Solution ',
+                    date: '25 December,2022 ',
+
+                }, {
+                    id: 10,
+                    bnt: "02",
+                    src: require('@/assets/img/articles1.png'),
+                    alt: 'design',
+                    text: 'Interior Design',
+                    contentText: 'Best For Any Office & Business Interior Solution ',
+                    date: '25 December,2022 ',
+
+                }, {
+                    id: 11,
+                    bnt: "02",
+                    src: require('@/assets/img/articles2.png'),
+                    alt: 'design',
+                    text: 'Interior Design',
+                    contentText: 'Best For Any Office & Business Interior Solution ',
+                    date: '25 December,2022 ',
+
+                }, {
+                    id: 12,
+                    bnt: "02",
+                    src: require('@/assets/img/articles6.png'),
+                    alt: 'design',
+                    text: 'Interior Design',
+                    contentText: 'Best For Any Office & Business Interior Solution ',
+                    date: '25 December,2022 ',
+
+                }, {
+                    id: 13,
+                    bnt: "03",
+                    src: require('@/assets/img/articles6.png'),
+                    alt: 'design',
+                    text: 'Interior Design',
+                    contentText: 'Best For Any Office & Business Interior Solution ',
+                    date: '25 December,2022 ',
+
+                }, {
+                    id: 14,
+                    bnt: "03",
+                    src: require('@/assets/img/articles1.png'),
+                    alt: 'design',
+                    text: 'Interior Design',
+                    contentText: 'Best For Any Office & Business Interior Solution ',
+                    date: '25 December,2022 ',
+
+                }, {
+                    id: 15,
+                    bnt: "03",
+                    src: require('@/assets/img/articles6.png'),
+                    alt: 'design',
+                    text: 'Interior Design',
+                    contentText: 'Best For Any Office & Business Interior Solution ',
+                    date: '25 December,2022 ',
+
+                }, {
+                    id: 16,
+                    bnt: "03",
+                    src: require('@/assets/img/articles5.png'),
+                    alt: 'design',
+                    text: 'Interior Design',
+                    contentText: 'Best For Any Office & Business Interior Solution ',
+                    date: '25 December,2022 ',
+
+                }, {
+                    id: 17,
+                    bnt: "03",
+                    src: require('@/assets/img/articles6.png'),
+                    alt: 'design',
+                    text: 'Interior Design',
+                    contentText: 'Best For Any Office & Business Interior Solution ',
+                    date: '25 December,2022 ',
+
+                }, {
+                    id: 18,
+                    bnt: "03",
+                    src: require('@/assets/img/articles6.png'),
+                    alt: 'design',
+                    text: 'Interior Design',
+                    contentText: 'Best For Any Office & Business Interior Solution ',
+                    date: '25 December,2022 ',
+
+                },
+            ]
         }
     },
     methods: {
-
+        paginate(e) {
+            const activeButton = document.querySelector(".pagination-active");
+            activeButton.classList.remove("pagination-active");
+            e.target.classList.add("pagination-active");
+            this.articles = this.fullarticles.filter(
+                (element) => element.bnt === e.target.dataset.id
+            );
+        },
     },
 
 };

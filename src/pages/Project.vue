@@ -34,7 +34,15 @@
                 </div>
             </section>
             <section class="pagination center">
-                <ul class="pagination__list">
+                <Pagination @click="paginate" data-id="01" class="pagination-button pagination-active">{{ "01" }}
+                </Pagination>
+                <Pagination @click="paginate" data-id="02" class="pagination-button">{{
+                    "02"
+                }}</Pagination>
+                <Pagination @click="paginate" data-id="03" class="pagination-button">{{
+                    "03"
+                }}</Pagination>
+                <!-- <ul class="pagination__list">
 
                     <li class="pagination__list_item">
                         <a class="pagination__list_item_hov" href="#">
@@ -72,18 +80,20 @@
                     </li>
 
 
-                </ul>
+                </ul> -->
             </section>
         </main>
     </div>
 </template>
 
 <script>
+import Pagination from '../components/Pagination.vue'
 import ProjectCard from '../components/ProjectCard.vue'
 export default {
     name: 'Project',
     components: {
-        ProjectCard
+        ProjectCard,
+        Pagination
     },
 
     data() {
@@ -195,7 +205,97 @@ export default {
                 text: "Modern Medroom",
                 link1: "Decor",
                 link2: "Artchitecture",
-            },],
+            },
+            {
+                id: 15,
+                bnt: "03",
+                nameid: "Kitchen",
+                images: require("@/assets/img/project-beadroom8.png"),
+                text: "Modern Medroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            },
+            {
+                id: 16,
+                bnt: "03",
+                nameid: "Kitchen",
+                images: require("@/assets/img/project-beadroom8.png"),
+                text: "Modern Medroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            },
+            {
+                id: 17,
+                bnt: "03",
+                nameid: "Kitchen",
+                images: require("@/assets/img/project-beadroom8.png"),
+                text: "Modern Medroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            },
+            {
+                id: 17,
+                bnt: "03",
+                nameid: "Kitchen",
+                images: require("@/assets/img/project-beadroom8.png"),
+                text: "Modern Medroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            },
+            {
+                id: 17,
+                bnt: "03",
+                nameid: "Kitchen",
+                images: require("@/assets/img/project-beadroom8.png"),
+                text: "Modern Medroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            },  {
+                id: 18,
+                bnt: "03",
+                nameid: "Kitchen",
+                images: require("@/assets/img/project-beadroom8.png"),
+                text: "Modern Medroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            },
+            {
+                id: 19,
+                nameid: "Living Area",
+                images: require("@/assets/img/project-beadroom6.png"),
+                text: "Modern Medroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            }, {
+                id: 20,
+                nameid: "Living Area",
+                images: require("@/assets/img/project-beadroom6.png"),
+                text: "Modern Medroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            },
+            {
+                id: 21,
+                nameid: "Bathroom",
+                images: require("@/assets/img/project-beadroom6.png"),
+                text: "Modern Medroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            }, {
+                id: 22,
+                nameid: "Bathroom",
+                images: require("@/assets/img/project-beadroom6.png"),
+                text: "Modern Medroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            },{
+                id: 23,
+                nameid: "Bathroom",
+                images: require("@/assets/img/project-beadroom6.png"),
+                text: "Modern Medroom",
+                link1: "Decor",
+                link2: "Artchitecture",
+            },  ],
 
             currentCards: [
                 {
@@ -272,6 +372,14 @@ export default {
                 (project) => project.nameid === e.target.innerText
             );
             //return this.cards;
+        },
+        paginate(e) {
+            const activeButton = document.querySelector(".pagination-active");
+            activeButton.classList.remove("pagination-active");
+            e.target.classList.add("pagination-active");
+            this.currentCards = this.cards.filter(
+                (project) => project.dataid === e.target.id
+            );
         },
 
     },
