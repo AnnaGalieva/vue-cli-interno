@@ -11,7 +11,7 @@
                                     <router-link to="/" class="blog__info__heading_breadcrumb_link">Home</router-link>
                                 </li>
                                 <li class="blog__info__heading_breadcrumb_li">
-                                    <router-link to="/Blog" class="blog__info__heading_breadcrumb_link">Blog</router-link>
+                                    <router-link to="/BlogDetails" class="blog__info__heading_breadcrumb_link">Blog</router-link>
                                 </li>
                             </ul>
                         </nav>

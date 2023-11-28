@@ -27,18 +27,20 @@
                         readable content of page lookings at its layouts points.</p>
                 </div>
                 <div class="projects__all">
-                    <div class="projects__all_item">
-                        <img src="@/assets/img/projects__all_item_img1.png" alt="" class="projects__all_item_img1">
+                    <div v-for="projectCard in  projectCards " :key="projectCard.id" class="projects__all_item">
+                        <img :src=projectCard.img alt="" class="projects__all_item_img1">
                         <div class="projects__all_item_content">
                             <div class="projects__all_item_content_text">
-                                <p class="projects__all_item_content_text_1">Modern Kitchan</p>
+                                <p class="projects__all_item_content_text_1">{{ projectCard.header }}</p>
                                 <nav class="projects__all_item_content_breadcrumb">
                                     <ul class="projects__all_item_content_breadcrumb_ul">
                                         <li class="projects__all_item_content_breadcrumb_li">
-                                            <a class="projects__all_item_content_breadcrumb_link" href="">Decor</a>
+                                            <a class="projects__all_item_content_breadcrumb_link" href="">{{
+                                                projectCard.link1 }}</a>
                                         </li>
                                         <li class="projects__all_item_content_breadcrumb_li">
-                                            <a class="projects__all_item_content_breadcrumb_link" href="">Artchitecture</a>
+                                            <a class="projects__all_item_content_breadcrumb_link" href="">{{
+                                                projectCard.link2 }}</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -54,88 +56,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="projects__all_item">
-                        <img src="@/assets/img/projects__all_item_img2.png" alt="" class="projects__all_item_img2">
-                        <div class="projects__all_item_content">
-                            <div class="projects__all_item_content_text">
-                                <p class="projects__all_item_content_text_1">Modern Kitchan</p>
-                                <nav class="projects__all_item_content_breadcrumb">
-                                    <ul class="projects__all_item_content_breadcrumb_ul">
-                                        <li class="projects__all_item_content_breadcrumb_li">
-                                            <a class="projects__all_item_content_breadcrumb_link" href="">Decor</a>
-                                        </li>
-                                        <li class="projects__all_item_content_breadcrumb_li">
-                                            <a class="projects__all_item_content_breadcrumb_link" href="">Artchitecture</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                            <div class="projects__all_item_content_button">
-                                <router-link to="/Project" class="projects__all_item_content_btn"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70"
-                                        fill="none">
-                                        <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
-                                        <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg></router-link>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="projects__all_item">
-                        <img src="@/assets/img/projects__all_item_img3.png" alt="" class="projects__all_item_img3">
-                        <div class="projects__all_item_content">
-                            <div class="projects__all_item_content_text">
-                                <p class="projects__all_item_content_text_1">Modern Kitchan</p>
-                                <nav class="projects__all_item_content_breadcrumb">
-                                    <ul class="projects__all_item_content_breadcrumb_ul">
-                                        <li class="projects__all_item_content_breadcrumb_li">
-                                            <a class="projects__all_item_content_breadcrumb_link" href="">Decor</a>
-                                        </li>
-                                        <li class="projects__all_item_content_breadcrumb_li">
-                                            <a class="projects__all_item_content_breadcrumb_link" href="">Artchitecture</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                            <div class="projects__all_item_content_button">
-                                <router-link to="/Project" class="projects__all_item_content_btn"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70"
-                                        fill="none">
-                                        <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
-                                        <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg></router-link>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="projects__all_item">
-                        <img src="@/assets/img/projects__all_item_img4.png" alt="" class="projects__all_item_img4">
-                        <div class="projects__all_item_content">
-                            <div class="projects__all_item_content_text">
-                                <p class="projects__all_item_content_text_1">Modern Kitchan</p>
-                                <nav class="projects__all_item_content_breadcrumb">
-                                    <ul class="projects__all_item_content_breadcrumb_ul">
-                                        <li class="projects__all_item_content_breadcrumb_li">
-                                            <a class="projects__all_item_content_breadcrumb_link" href="">Decor</a>
-                                        </li>
-                                        <li class="projects__all_item_content_breadcrumb_li">
-                                            <a class="projects__all_item_content_breadcrumb_link" href="">Artchitecture</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                            <div class="projects__all_item_content_button">
-                                <router-link to="/Project" class="projects__all_item_content_btn"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70"
-                                        fill="none">
-                                        <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
-                                        <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg></router-link>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </section>
             <section class="results center">
@@ -174,53 +94,13 @@
                         content of a page when lookings at its layouts the points of using.</p>
                 </div>
                 <div class="news__all">
-                    <div class="news__all_item">
-                        <img src="@/assets/img/news1.svg" alt="" class="news__all_item_img">
-                        <a class="news__all_item_text" href="blog_details.html">Kitchan Design</a>
+                    <div v-for="newsCard in newsCards" :key="newsCard.id" class="news__all_item">
+                        <img :src=newsCard.img alt="" class="news__all_item_img">
+                        <a class="news__all_item_text" href="blog_details.html">{{ newsCard.name }}</a>
                         <div class="news__all_item_content">
-                            <p class="news__all_item_content_text">Let’s Get Solution For Building Construction Work</p>
+                            <p class="news__all_item_content_text">{{ newsCard.header }}</p>
                             <div class="news__all_item_content_contentmin">
-                                <p class="news__all_item_content_texting">26 December,2022 </p>
-                                <div class="news__all_item_content_button">
-                                    <router-link to="/Blog" class="news__all_item_content_btn"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53"
-                                            fill="none">
-                                            <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-                                            <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
-                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg></router-link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news__all_item_center">
-                        <img src="@/assets/img/news2.svg" alt="" class="news__all_item_img">
-                        <a class="news__all_item_text" href="blog_details.html">Living Design</a>
-                        <div class="news__all_item_content">
-                            <p class="news__all_item_content_text">Low Cost Latest Invented Interior Designing Ideas.
-                            </p>
-                            <div class="news__all_item_content_contentmin">
-                                <p class="news__all_item_content_texting">22 December,2022 </p>
-                                <div class="news__all_item_content_button">
-                                    <router-link to="/Blog" class="news__all_item_content_btn_center"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53"
-                                            fill="none">
-                                            <circle cx="26" cy="26.267" r="26" fill="white" />
-                                            <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
-                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg></router-link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news__all_item">
-                        <img src="@/assets/img/news3.svg" alt="" class="news__all_item_img">
-                        <a class="news__all_item_text" href="blog_details.html">Interior Design</a>
-                        <div class="news__all_item_content">
-                            <p class="news__all_item_content_text">Best For Any Office & Business Interior Solution
-                            </p>
-                            <div class="news__all_item_content_contentmin">
-                                <p class="news__all_item_content_texting">25 December,2022 </p>
+                                <p class="news__all_item_content_texting">{{ newsCard.date }} </p>
                                 <div class="news__all_item_content_button">
                                     <router-link to="/Blog" class="news__all_item_content_btn"><svg
                                             xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53"
@@ -240,6 +120,55 @@
 </template>
 <script>
 export default {
-    name: 'HomePage'
+    name: 'HomePage',
+    data() {
+        return {
+            projectCards: [
+                {
+                    img: require("@/assets/img/projects__all_item_img1.png"),
+                    header: 'Modern Kitchan',
+                    link1: 'Decor',
+                    link2: 'Artchitecture'
+                }, {
+                    img: require("@/assets/img/projects__all_item_img2.png"),
+                    header: 'Modern Kitchan',
+                    link1: 'Decor',
+                    link2: 'Artchitecture'
+                }, {
+                    img: require("@/assets/img/projects__all_item_img3.png"),
+                    header: 'Modern Kitchan',
+                    link1: 'Decor',
+                    link2: 'Artchitecture'
+                },
+                {
+                    img: require("@/assets/img/projects__all_item_img4.png"),
+                    header: 'Modern Kitchan',
+                    link1: 'Decor',
+                    link2: 'Artchitecture'
+                },
+            ],
+            newsCards: [
+                {
+                    img: require("@/assets/img/news1.svg"),
+                    name: 'Living Design',
+                    header: 'Let’s Get Solution For Building Construction Work',
+                    date: '26 December, 2022',
+                },
+                {
+                    img: require("@/assets/img/news2.svg"),
+                    name: 'Kitchan Design',
+                    header: 'Low Cost Latest Invented Interior Designing Ideas.',
+                    date: '22 December, 2022',
+                },
+                {
+                    img: require("@/assets/img/news3.svg"),
+                    name: 'Interior Design',
+                    header: 'Best For Any Office & Business Interior Solution',
+                    date: '25 December, 2022',
+                },
+            ],
+        };
+    },
 }
 </script>
+<style lang="scss" scoped></style>

@@ -11,7 +11,7 @@
                                     <router-link to="/" class="project__info__heading_breadcrumb_link">Home</router-link>
                                 </li>
                                 <li class="project__info__heading_breadcrumb_li">
-                                    <router-link to="/Project"
+                                    <router-link to="/ProjectDetails"
                                         class="project__info__heading_breadcrumb_link">Project</router-link>
                                 </li>
                             </ul>

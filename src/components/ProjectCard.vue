@@ -1,7 +1,7 @@
 <template>
     <div class="categories__all_items">
         <div class="categories__all_image">
-            <img class="categories__all_img" :src="project.images" alt="img">
+            <img class="categories__all_img" :src="project.images"  alt="img">
             <div class="categories__all_star">
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none"
                     @click="select">
