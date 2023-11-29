@@ -37,7 +37,6 @@
 [Посмотреть макет](https://www.figma.com/file/okdYD45Tj2JpKsNASccUmf/Interior-Design-Webflow-Website-Template-(Community)-(Copy)-(Copy)?node-id=1%3A5&mode=dev)
 ## Ссылка на GitHub Pages
 [Посмотреть работу]()
-
 ## Project setup
 ```
 npm install
